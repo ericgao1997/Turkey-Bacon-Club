@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Cuber.unity
+- path: Assets/Monster control.unity
   isLoaded: 1
   isActive: 1
