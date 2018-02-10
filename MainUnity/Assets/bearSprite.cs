@@ -8,6 +8,7 @@ public class bearSprite : MonoBehaviour {
 	public Sprite left;
 	public Sprite down;
 	public Sprite right;
+	static public bool bang;
 
 	private SpriteRenderer spriteRenderer;
 
