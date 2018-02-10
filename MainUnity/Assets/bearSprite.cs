@@ -4,28 +4,53 @@ using UnityEngine;
 
 public class bearSprite : MonoBehaviour {
 	public GameObject follow;
-	public Sprite up;
-	public Sprite left;
-	public Sprite down;
-	public Sprite right;
-	static public bool bang;
+	static public bool bang = false;
 
+	private Sprite up;
+	private Sprite left;
+	private Sprite down;
+	private Sprite right;
 	private SpriteRenderer spriteRenderer;
+	private int delay = 1;
+	private int timer = 0;
 
 	// Use this for initialization
 	void Start () {
 		transform.position = follow.transform.position;
 		spriteRenderer = GetComponent<SpriteRenderer>();
-		// Sprite bum = Resources.Load("Bear/bearBack")as Sprite;
-		// Sprite face = Resources.Load("Bear/bearFront")as Sprite;
-		// Sprite ring = Resources.Load("Bear/bearRight")as Sprite;
-		// Sprite leg = Resources.Load("Bear/bearLeft") as Sprite;
+
+
+		up = Resources.Load<Sprite>("bearBack")as Sprite;
+		down = Resources.Load<Sprite>("bearFront")as Sprite;
+		right = Resources.Load<Sprite>("bearRight")as Sprite;
+		left = Resources.Load<Sprite>("bearLeft") as Sprite;
 	}
 	// Does this help?
 	// Update is called once per frame
 	void Update () {
 		transform.position = follow.transform.position;
-		transform.Translate(0f, 1f, 0f);
+		transform.Translate(0f, 0.5f, 0f);
+		if (Input.GetButtonDown("Fire1")){
+			bang = true;
+			print("true");
+			timer = 0;
+			up = Resources.Load<Sprite>("shotUp")as Sprite;
+			down = Resources.Load<Sprite>("shotDown")as Sprite;
+			right = Resources.Load<Sprite>("shotRight")as Sprite;
+			left = Resources.Load<Sprite>("shotLeft") as Sprite;
+		}else{
+			bang = false;
+			print("false");
+			if (timer == delay) {
+				delay = 0;
+				up = Resources.Load<Sprite>("bearBack")as Sprite;
+				down = Resources.Load<Sprite>("bearFront")as Sprite;
+				right = Resources.Load<Sprite>("bearRight")as Sprite;
+				left = Resources.Load<Sprite>("bearLeft") as Sprite;
+			}else {
+				delay++;
+			}
+		}
 		float wut = follow.transform.eulerAngles.z;
 		// print(wut);
 		if (wut >= 45 && wut <135){
