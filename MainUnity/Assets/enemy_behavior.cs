@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class enemy_behavior : MonoBehaviour {
-    Vector3 Target = new Vector3(0, 0, 2);
+    Vector3 Target = new Vector3(0, 0, 0);
     public float speed;
     private SpriteRenderer SpriteRend;
     // Use this for initialization

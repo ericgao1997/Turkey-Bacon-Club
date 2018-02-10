@@ -12,14 +12,14 @@ public class Bulletflight : MonoBehaviour {
 		lifespan=50;
 	}
 	
-	Vector3 heading = new Vector3((float)(0.1*transform.position.x), (float)(0.1*transform.position.y), 0f);
+	//Vector3 heading = new Vector3((float)(0.1*transform.position.x), (float)(0.1*transform.position.y), 0f);
 
 	// Update is called once per frame
 	void Update () {
 
 		//no collision case
 		if (lifespan > 0){
-			transform.position += heading;
+			//transform.position += heading;
 			lifespan-=1;
 		} else {
 			//this.renderer.enabled = false;

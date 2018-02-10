@@ -11,7 +11,8 @@ public class PlayerMovement : MonoBehaviour {
 
 	//steps per update
 	public int quadrant; //1 to 4
-	static public bool reached=false; 
+	static public bool reachedx=false;
+	static public bool reachedy=false;
 
 	// Use this for initialization
 	void Start () {
@@ -29,10 +30,19 @@ public class PlayerMovement : MonoBehaviour {
 		//steps = 1.5f;
 	}
 
+	public thirdEnToggle tetToggle; //doesn't work if u don't turn off TeT before disabling render
 	//(0,0,2) is center
 	// Update is called once per frame
 	void Update () {
 		//all monsters of same type move same speed!
+
+		if (reachedx && reachedy) {
+			//Debug.Log ("test");
+			tetToggle.enabled = false;
+			GetComponent<Renderer>().enabled = false;
+			Destroy (this);
+		}
+
 
 		//x-axis
 		if (quadrant == 1 || quadrant == 4) {
@@ -40,7 +50,7 @@ public class PlayerMovement : MonoBehaviour {
 				Vector3 temp = new Vector3 (steps,0,0);
 				transform.position -= temp;
 			} else {
-				reached = true;
+				reachedx = true;
 			}
 		}
 		else{
@@ -48,7 +58,7 @@ public class PlayerMovement : MonoBehaviour {
 				Vector3 temp = new Vector3 (steps,0,0);
 				transform.position += temp;
 			} else {
-				reached = true;
+				reachedx = true;
 			}
 		}
 
@@ -58,7 +68,7 @@ public class PlayerMovement : MonoBehaviour {
 				Vector3 temp = new Vector3 (0,steps,0);
 				transform.position -= temp;
 			} else {
-				reached = true;
+				reachedy = true;
 			}
 		}
 		else{
@@ -66,7 +76,7 @@ public class PlayerMovement : MonoBehaviour {
 				Vector3 temp = new Vector3 (0,steps,0);
 				transform.position += temp;
 			} else {
-				reached = true;
+				reachedy = true;
 			}
 		}
 		
