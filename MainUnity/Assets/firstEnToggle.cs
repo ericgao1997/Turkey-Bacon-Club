@@ -10,7 +10,7 @@ public class firstEnToggle : MonoBehaviour {
 	// Use this for initialization
 	void Start () { //off at start
 		hitbox.enabled = false;
-		mesh.enabled = false;
+		//mesh.enabled = false;
 	}
 	
 	// Update is called once per frame
@@ -18,11 +18,12 @@ public class firstEnToggle : MonoBehaviour {
 		//Debug.Log (1);
 		if (resChanger.level == 1) {
 			hitbox.enabled = true;
-			mesh.enabled = true;
+			//mesh.enabled = true;
+
 		}
 		else {
 			hitbox.enabled = false;
-			mesh.enabled = false;
+			//mesh.enabled = false;
 		}
 	}
 }
