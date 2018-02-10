@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Monster control.unity
+- path: Assets/FarlandSkies/Demo/DemoScene.unity
   isLoaded: 1
   isActive: 1
