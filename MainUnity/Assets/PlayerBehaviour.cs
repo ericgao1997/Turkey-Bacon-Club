@@ -39,6 +39,14 @@ public class PlayerBehaviour : MonoBehaviour {
         transform.rotation = Quaternion.Euler(0f, 0f, rotation_z + offset - 90);
 	}
 
+	void Shoot(){
+		//Instantiate(Bullet_0, this.transform.position, this.transform.rotation);
+	}
+
+	void ShootSpecial(){
+		//stuff
+	}
+
 	// Update is called once per frame
 	void Update () {
 
@@ -59,6 +67,12 @@ public class PlayerBehaviour : MonoBehaviour {
 		}
 		if (Input.GetKeyDown("s")){
 			Change_Resolution(-1);
+		}
+		if (Input.GetMouseButtonDown(0)){	//leftmouse click
+			Shoot();
+		}
+		if (Input.GetMouseButtonDown(1)){
+			ShootSpecial();
 		}
 	}
 
