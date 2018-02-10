@@ -24,6 +24,7 @@ public class bearSprite : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		transform.position = follow.transform.position;
+		transform.Translate(0f, 1f, 0f);
 		float wut = follow.transform.eulerAngles.z;
 		// print(wut);
 		if (wut >= 45 && wut <135){
