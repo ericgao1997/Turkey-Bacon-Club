@@ -1,1 +1,4 @@
-sceneSetups: []
+sceneSetups:
+- path: Assets/mouse controls.unity
+  isLoaded: 1
+  isActive: 1
