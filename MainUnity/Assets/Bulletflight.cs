@@ -12,6 +12,10 @@ public class Bulletflight : MonoBehaviour {
 		lifespan=50;
 	}
 	
+<<<<<<< HEAD
+=======
+	Vector3 heading = new Vector3(0,0,0);
+>>>>>>> 4e907a39267ab7740313079947bf75190d8c15e7
 	//Vector3 heading = new Vector3((float)(0.1*transform.position.x), (float)(0.1*transform.position.y), 0f);
 
 	// Update is called once per frame
