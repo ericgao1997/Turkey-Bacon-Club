@@ -8,7 +8,7 @@ public class bearSprite : MonoBehaviour {
 	void Start () {
 		transform.position = follow.transform.position;
 	}
-	
+	// Does this help?
 	// Update is called once per frame
 	void Update () {
 		transform.position = follow.transform.position;
