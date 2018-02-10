@@ -857,7 +857,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1645053424}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d9a61cc2a0e0744f8263b69d936b214, type: 3}
+  m_Script: {fileID: 11500000, guid: 74d3151effdfcae46b2ea6b9fb69f8ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   offset: 0
@@ -904,6 +904,16 @@ Prefab:
     - target: {fileID: 4925849533910554, guid: d5f15a9a6470642b38195ff2f54816aa, type: 2}
       propertyPath: m_LocalScale.x
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114082686273378476, guid: d5f15a9a6470642b38195ff2f54816aa,
+        type: 2}
+      propertyPath: offset
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114082686273378476, guid: d5f15a9a6470642b38195ff2f54816aa,
+        type: 2}
+      propertyPath: angel
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
