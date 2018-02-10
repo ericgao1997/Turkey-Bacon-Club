@@ -11,7 +11,7 @@ public class bearSprite : MonoBehaviour {
 	private Sprite down;
 	private Sprite right;
 	private SpriteRenderer spriteRenderer;
-	private int delay = 1;
+	private int delay = 10;
 	private int timer = 0;
 
 	// Use this for initialization
@@ -42,13 +42,13 @@ public class bearSprite : MonoBehaviour {
 			bang = false;
 			print("false");
 			if (timer == delay) {
-				delay = 0;
+				timer = 0;
 				up = Resources.Load<Sprite>("bearBack")as Sprite;
 				down = Resources.Load<Sprite>("bearFront")as Sprite;
 				right = Resources.Load<Sprite>("bearRight")as Sprite;
 				left = Resources.Load<Sprite>("bearLeft") as Sprite;
 			}else {
-				delay++;
+				timer++;
 			}
 		}
 		float wut = follow.transform.eulerAngles.z;

@@ -759,10 +759,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   follow: {fileID: 1645053424}
-  up: {fileID: 21300000, guid: 4f6bf139c0add41449fd0d8d23c38b85, type: 3}
-  left: {fileID: 21300000, guid: 7f81555e5558c43c79371e631081b00b, type: 3}
-  down: {fileID: 21300000, guid: 9e2b704c1b28b44738fcae39efb33fe9, type: 3}
-  right: {fileID: 21300000, guid: 8d2bfbc6809b0419bae2a9deb653ed12, type: 3}
 --- !u!212 &927131472
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -797,7 +793,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f46f3e52d17beeb4ba8773bbf317cc08, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3204232d6d4407b458143e8e21bcf375, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -805,7 +801,7 @@ SpriteRenderer:
   m_Size: {x: 0.7, y: 1.3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
 --- !u!4 &927131473
 Transform:
