@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/mouse controls.unity
+- path: Assets/Cuber.unity
   isLoaded: 1
   isActive: 1
