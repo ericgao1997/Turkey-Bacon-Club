@@ -26,10 +26,12 @@ public class EnemyManager : MonoBehaviour
 		// Find a random index between zero and one less than the number of spawn points.
 		int spawnangle = Random.Range (0, 360); //ALWAYS SPAWN furthest away from circle
 
-		//here manipulate setEnemyType.cs static vars to spawn diff enemies
+        //here manipulate setEnemyType.cs static vars to spawn diff enemies
 
-		Vector3 zero = new Vector3 (0, 0, 0);
-		// Create an instance of the enemy prefab at the randomly selected spawn point's position and rotation.
-		Instantiate (enemy, spawnPoint, zero);
+        Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        difference.Normalize();
+        Vector3 spawnPoint = difference * 100;
+        // Create an instance of the enemy prefab at the randomly selected spawn point's position and rotation.
+        Instantiate (enemy, spawnPoint, new Quaternion(0,0,0,0));
 	}
 }
