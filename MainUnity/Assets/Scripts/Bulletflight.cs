@@ -22,7 +22,7 @@ public class Bulletflight : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.tag == "isEnemy") {
 			if (other.gameObject.GetComponent<setEnemyType> ().type == level) {
-				score++
+				score++;
 				Destroy (gameObject);
 			}
 		}
