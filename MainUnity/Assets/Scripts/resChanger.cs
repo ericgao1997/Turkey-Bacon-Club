@@ -29,7 +29,7 @@ public class resChanger : MonoBehaviour {
 			else //elif level == 0
 				;
 		}
-			
+
 		//Debug.Log (level);
 	}
 }

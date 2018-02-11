@@ -55,6 +55,9 @@
      <Compile Include="Assets\FarlandSkies\Demo\Scripts\Player\SmoothMouseLook.cs" />
      <Compile Include="Assets\FarlandSkies\Demo\Scripts\Skybox\SkyboxChanger.cs" />
      <Compile Include="Assets\FarlandSkies\Demo\Scripts\Skybox\SkyboxRotator.cs" />
+     <Compile Include="Assets\gameOver.cs" />
+     <Compile Include="Assets\hpManager.cs" />
+     <Compile Include="Assets\ImagineVR\CameraCensorship.cs" />
      <Compile Include="Assets\Scripts\bearSprite.cs" />
      <Compile Include="Assets\Scripts\Bulletflight.cs" />
      <Compile Include="Assets\Scripts\collisionDD.cs" />
