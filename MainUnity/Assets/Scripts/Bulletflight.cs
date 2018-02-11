@@ -19,7 +19,9 @@ public class Bulletflight : MonoBehaviour {
     }
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.tag == "isEnemy") {
-			Destroy (gameObject);
+			if (other.gameObject.GetComponent<setEnemyType> ().type == resChanger.level) {
+				Destroy (gameObject);
+			}
 		}
 	}
 	public void move(){

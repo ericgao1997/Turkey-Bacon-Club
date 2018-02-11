@@ -1,2 +1,30 @@
 Base path: /Applications/Unity/Unity.app/Contents
 Cmd: initializeCompiler
+Cmd: preprocess
+  insize=1482 outsize=457 ok=1
+Cmd: disassembleShader
+  api=14 insize=1511 outsize=1495 ok=1
+Cmd: disassembleShader
+  api=14 insize=1125 outsize=1109 ok=1
+Cmd: preprocess
+  insize=1482 outsize=457 ok=1
+Cmd: disassembleShader
+  api=14 insize=1511 outsize=1495 ok=1
+Cmd: disassembleShader
+  api=14 insize=1125 outsize=1109 ok=1
+Cmd: preprocess
+  insize=1480 outsize=455 ok=1
+Cmd: disassembleShader
+  api=14 insize=1511 outsize=1495 ok=1
+Cmd: disassembleShader
+  api=14 insize=1125 outsize=1109 ok=1
+Cmd: preprocess
+  insize=1482 outsize=457 ok=1
+Cmd: disassembleShader
+  api=14 insize=1511 outsize=1495 ok=1
+Cmd: disassembleShader
+  api=14 insize=1125 outsize=1109 ok=1
+Cmd: disassembleShader
+  api=14 insize=1511 outsize=1495 ok=1
+Cmd: disassembleShader
+  api=14 insize=1125 outsize=1109 ok=1

@@ -13,12 +13,15 @@ public class setEnemyType : MonoBehaviour {
 	public float speed;
 	private SpriteRenderer SpriteRend;
 
+	public int enHP;
+
 	// Use this for initialization
 	void Start () {
 		animator = GetComponent<Animator>();
 		//animator.SetBool("Blur", true);
 		size = nextEnSize;
 		type = nextEnType;
+		enHP = size;
 		animator.SetInteger("Enemynum",type);
 		Vector3 scale = new Vector3(size, size, 1);
 		transform.localScale = scale;
@@ -33,14 +36,21 @@ public class setEnemyType : MonoBehaviour {
 		}
 		speed = 0.05f/(size);
 	}
-	
+
+	void OnTriggerEnter2D(Collider2D other) {
+		if (other.gameObject.tag == "isBullet") {
+			enHP--;
+		}
+	}
+
 	// Update is called once per frame
 	void Update () {
 		transform.position = Vector3.MoveTowards(transform.position, Target, speed);
 		//transform.position = transform.position + Target;
 		//Debug.Log ("position is " + transform.position);
-		if (false) {
+		if (enHP <1) {
 			animator.Play ("death");
+			Destroy (gameObject,0.2f);
 		}
 	}
 }
