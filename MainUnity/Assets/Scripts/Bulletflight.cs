@@ -8,6 +8,7 @@ public class Bulletflight : MonoBehaviour {
 	float m_Speed;
 	int lifespan;
 	public int level;
+	static public int score =0;
 
 	// Use this for initialization
 	void Start () {
@@ -21,6 +22,7 @@ public class Bulletflight : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.tag == "isEnemy") {
 			if (other.gameObject.GetComponent<setEnemyType> ().type == level) {
+				score++
 				Destroy (gameObject);
 			}
 		}
