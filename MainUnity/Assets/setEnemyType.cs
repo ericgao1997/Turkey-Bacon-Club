@@ -48,5 +48,8 @@ public class setEnemyType : MonoBehaviour {
 		transform.position = Vector3.MoveTowards(transform.position, Target, speed);
 		//transform.position = transform.position + Target;
 		//Debug.Log ("position is " + transform.position);
+		if (false) {
+			animator.Play ("death");
+		}
 	}
 }
