@@ -2,3 +2,6 @@
 
 MainUnity/Temp/UnityLockfile/
 .vs/
+.json/
+.info/
+.mat/
