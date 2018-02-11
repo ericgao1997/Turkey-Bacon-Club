@@ -51,22 +51,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\bearSprite.cs" />
-     <Compile Include="Assets\Bulletflight.cs" />
-     <Compile Include="Assets\collisionDD.cs" />
-     <Compile Include="Assets\enemy_behavior.cs" />
      <Compile Include="Assets\FarlandSkies\Demo\Scripts\Player\FPSWalkerEnhanced.cs" />
      <Compile Include="Assets\FarlandSkies\Demo\Scripts\Player\SmoothMouseLook.cs" />
      <Compile Include="Assets\FarlandSkies\Demo\Scripts\Skybox\SkyboxChanger.cs" />
      <Compile Include="Assets\FarlandSkies\Demo\Scripts\Skybox\SkyboxRotator.cs" />
-     <Compile Include="Assets\firstEnToggle.cs" />
-     <Compile Include="Assets\PlayerBehaviour.cs" />
-     <Compile Include="Assets\PlayerMovement.cs" />
-     <Compile Include="Assets\Pointtomouse.cs" />
-     <Compile Include="Assets\resChanger.cs" />
-     <Compile Include="Assets\secondEnToggle.cs" />
-     <Compile Include="Assets\Statechange.cs" />
-     <Compile Include="Assets\thirdEnToggle.cs" />
+     <Compile Include="Assets\Scripts\bearSprite.cs" />
+     <Compile Include="Assets\Scripts\Bulletflight.cs" />
+     <Compile Include="Assets\Scripts\collisionDD.cs" />
+     <Compile Include="Assets\Scripts\enemy_behavior.cs" />
+     <Compile Include="Assets\Scripts\firstEnToggle.cs" />
+     <Compile Include="Assets\Scripts\PlayerBehaviour.cs" />
+     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\Pointtomouse.cs" />
+     <Compile Include="Assets\Scripts\resChanger.cs" />
+     <Compile Include="Assets\Scripts\secondEnToggle.cs" />
+     <Compile Include="Assets\Scripts\Sleepstatescript.cs" />
+     <Compile Include="Assets\Scripts\Statechange.cs" />
+     <Compile Include="Assets\Scripts\thirdEnToggle.cs" />
  <Reference Include="UnityEngine.UIAutomation">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
  </Reference>
