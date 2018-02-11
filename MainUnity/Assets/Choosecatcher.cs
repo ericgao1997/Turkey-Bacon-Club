@@ -16,9 +16,9 @@ public class Choosecatcher : MonoBehaviour {
 		currCatcher = resChanger.level;
 		for (int i = 0; i < 4; ++i) {
 			if (i == currCatcher) {
-				catcher [currCatcher].sprite = img [currCatcher + 1];
+				catcher [i].sprite = img [currCatcher + 1];
 			}else {
-				catcher [currCatcher].sprite = img [0];
+				catcher [i].sprite = img [0];
 			}
 			Debug.Log (i);
 		}

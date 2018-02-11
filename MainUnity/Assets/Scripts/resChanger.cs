@@ -17,12 +17,12 @@ public class resChanger : MonoBehaviour {
 	void Update () {
 		
 		if (Input.GetKeyDown("w")){
-			level += 1;
+			level += 3;
 			level %= 4;
 		}
 
 		if (Input.GetKeyDown ("s")) {
-			level += 3;
+			level += 1;
 			level %= 4;
 		}
 
