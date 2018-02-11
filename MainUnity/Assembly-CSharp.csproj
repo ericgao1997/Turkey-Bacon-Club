@@ -55,7 +55,6 @@
      <Compile Include="Assets\FarlandSkies\Demo\Scripts\Player\FPSWalkerEnhanced.cs" />
      <Compile Include="Assets\FarlandSkies\Demo\Scripts\Player\SmoothMouseLook.cs" />
      <Compile Include="Assets\FarlandSkies\Demo\Scripts\Skybox\SkyboxChanger.cs" />
-     <Compile Include="Assets\FarlandSkies\Demo\Scripts\Skybox\SkyboxRotator.cs" />
      <Compile Include="Assets\gameOver.cs" />
      <Compile Include="Assets\hpManager.cs" />
      <Compile Include="Assets\ImagineVR\CameraCensorship.cs" />
@@ -71,6 +70,7 @@
      <Compile Include="Assets\Scripts\Pointtomouse.cs" />
      <Compile Include="Assets\Scripts\resChanger.cs" />
      <Compile Include="Assets\Scripts\secondEnToggle.cs" />
+     <Compile Include="Assets\Scripts\SkyboxRotator.cs" />
      <Compile Include="Assets\Scripts\Sleepstatescript.cs" />
      <Compile Include="Assets\Scripts\SpawnEnemies.cs" />
      <Compile Include="Assets\Scripts\Statechange.cs" />

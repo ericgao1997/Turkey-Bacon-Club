@@ -247,14 +247,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 458180558}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad65a03e2ba19b346ad04e5fcb9723f5, type: 3}
+  m_Script: {fileID: 11500000, guid: 81654ae442e9a4b63aa3190b5846cc48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   RotationPerSecond: 1
+  _rotate: 0
   Skyboxes:
   - {fileID: 2100000, guid: 3930fc89a28b29746bde6a2389a513e0, type: 2}
-  - {fileID: 2100000, guid: 169a1b8f06c17c84e8de491f2bfef986, type: 2}
   - {fileID: 2100000, guid: 77715b8b6b248994891d3ccad1ad330b, type: 2}
+  - {fileID: 2100000, guid: 169a1b8f06c17c84e8de491f2bfef986, type: 2}
   - {fileID: 2100000, guid: ceb0a3ed2cb53a94fa21843cc958c52b, type: 2}
 --- !u!1 &639825774
 GameObject:

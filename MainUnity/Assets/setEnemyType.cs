@@ -39,7 +39,7 @@ public class setEnemyType : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.tag == "isBullet") {
-			if (type == resChanger.level) {
+			if (type == other.gameObject.GetComponent<Bulletflight>().level) {
 				enHP--;
 			}
 		}

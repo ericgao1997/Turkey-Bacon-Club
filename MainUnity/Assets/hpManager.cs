@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class hpManager : MonoBehaviour {
 
-	static public int health = 1; //default 10
+	static public int health = 10; //default 10
 
 	// Use this for initialization
 	void Start () {}
