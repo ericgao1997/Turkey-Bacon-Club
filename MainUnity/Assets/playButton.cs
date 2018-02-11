@@ -25,6 +25,7 @@ public class playButton : MonoBehaviour {
 		if (Input.GetMouseButtonDown (0)) {
 			//Debug.Log ("Test");
 			SceneManager.LoadScene("Main"); //gotta build the app with both scenes(s)
+			//can't directly call the func cause not static
 		}
 	}
 }

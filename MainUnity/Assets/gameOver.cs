@@ -20,8 +20,14 @@ public class gameOver : MonoBehaviour {
 
 	}
 
+	void Update(){ //what the hell might as well make it a binding too
+		if (Input.GetMouseButtonDown (0)) {
+			this.endGame ();
+		}
+	}
+
 	void Restart(){
-		SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
+		SceneManager.LoadScene ("Main");
 	}
 
 }
