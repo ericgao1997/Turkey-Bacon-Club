@@ -6,7 +6,6 @@ using System;
 public class collisionDD : MonoBehaviour {
 
     void Start(){
-        Child_abuse = GetComponent<AudioSource>();
     }
 
     bool in_ring(int r){
