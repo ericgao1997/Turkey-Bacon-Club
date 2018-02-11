@@ -183,11 +183,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 845322796}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c1f35e670841b140a83b1ed2731239b, type: 3}
+  m_Script: {fileID: 11500000, guid: 95fc56d5f57434edb92f39cf632364a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gmov: {fileID: 21300000, guid: c48b77bf6247e7344b46b6144485b500, type: 3}
-  credits: {fileID: 21300000, guid: 2a3c93490461d934794ea66f450575f8, type: 3}
+  credits: {fileID: 21300000, guid: e79d81a94dcf54f2cb351ecc6b8459fb, type: 3}
   display: {fileID: 1903085707}
 --- !u!4 &845322799
 Transform:
