@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class gameOver : MonoBehaviour {
 
+	/*
 	bool gameHasEnded = false;
 
 	public float restartDelay = 1f;
@@ -19,15 +20,11 @@ public class gameOver : MonoBehaviour {
 		}
 
 	}
+*/
 
 	void Update(){ //what the hell might as well make it a binding too
 		if (Input.GetMouseButtonDown (0)) {
-			this.endGame ();
+			SceneManager.LoadScene ("Menu");
 		}
 	}
-
-	void Restart(){
-		SceneManager.LoadScene ("Main");
-	}
-
 }

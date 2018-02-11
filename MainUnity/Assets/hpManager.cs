@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class hpManager : MonoBehaviour {
 
@@ -11,7 +12,7 @@ public class hpManager : MonoBehaviour {
 
 	void Update(){
 		if (health <= 0) {
-			FindObjectOfType<gameOver>().endGame();
+			SceneManager.LoadScene("gameOverMenu");
 		}
 	}
 }
