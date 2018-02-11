@@ -49,9 +49,6 @@ public class PlayerBehaviour : MonoBehaviour {
 	// 		bulit.transform.position = bulit.transform.forward*0.1f;
 	// 	}
 	// }
-	void ShootSpecial(){
-		//stuff
-	}
 
 	// Update is called once per frame
 	void Update () {
@@ -66,7 +63,6 @@ public class PlayerBehaviour : MonoBehaviour {
 		if (Input.GetKey("d") || Input.GetKey("a")){
 			if (Input.GetKey("d")){ Turn(1); }
 			if (Input.GetKey("a")){ Turn(-1); }
-			
 		}
 
 		if (Input.GetMouseButtonDown(0)){	//leftmouse click
