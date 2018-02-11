@@ -10,7 +10,7 @@ public class hpManager : MonoBehaviour {
 	void Start () {}
 
 	void OnCollisionEnter(Collision col){
-		if (col.collider.tag = "enemy") {
+		if (col.collider.tag == "enemy") {
 			health -= 1;
 		}
 		if (health <= 0) {
