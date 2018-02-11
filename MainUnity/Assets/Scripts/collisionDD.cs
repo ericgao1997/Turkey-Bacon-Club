@@ -23,6 +23,7 @@ public class collisionDD : MonoBehaviour {
             Debug. Log ("In!");
             gameObject.GetComponent<Renderer>().enabled = false;
             Destroy(gameObject);
+			hpManager.health--;
         }
     }
 

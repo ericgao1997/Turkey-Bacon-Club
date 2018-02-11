@@ -24,7 +24,9 @@ public class SpawnEnemies : MonoBehaviour {
 			// ... exit the function.
 			return;
 		}
-
+		if (Random.Range (0, 3) != 0) {
+			return;
+		}
 		// Find a random index between zero and one less than the number of spawn points.
 		int spawnangle = Random.Range (0, 360); //ALWAYS SPAWN furthest away from circle
 
