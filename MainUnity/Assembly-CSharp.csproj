@@ -52,6 +52,8 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\BlurOnOff.cs" />
+     <Compile Include="Assets\Choosecatcher.cs" />
+     <Compile Include="Assets\credsS.cs" />
      <Compile Include="Assets\FarlandSkies\Demo\Scripts\Player\FPSWalkerEnhanced.cs" />
      <Compile Include="Assets\FarlandSkies\Demo\Scripts\Player\SmoothMouseLook.cs" />
      <Compile Include="Assets\FarlandSkies\Demo\Scripts\Skybox\SkyboxChanger.cs" />
@@ -60,6 +62,7 @@
      <Compile Include="Assets\ImagineVR\CameraCensorship.cs" />
      <Compile Include="Assets\playButton.cs" />
      <Compile Include="Assets\retry.cs" />
+     <Compile Include="Assets\Scripts\AmbientAudioControl.cs" />
      <Compile Include="Assets\Scripts\bearSprite.cs" />
      <Compile Include="Assets\Scripts\Bulletflight.cs" />
      <Compile Include="Assets\Scripts\collisionDD.cs" />

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class setEnemyType : MonoBehaviour {
 	private Animator animator;
+	public AudioSource getHit;
+	bool m_Play=false;
+	bool m_ToggleChange=false;
 	static public int nextEnType = 0;//0-3
 	static public int nextEnSize = 2;//1-3
 	public int size;
@@ -34,24 +37,29 @@ public class setEnemyType : MonoBehaviour {
 		{
 			SpriteRend.flipX = true;
 		}
-		speed = 0.05f/(size);
+
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.tag == "isBullet") {
 			if (type == other.gameObject.GetComponent<Bulletflight>().level) {
 				enHP--;
+				size--;
+				Vector3 scale = new Vector3(size, size, 1);
+				transform.localScale = scale;
+				getHit.Play ();
 			}
 		}
 	}
 
 	// Update is called once per frame
 	void Update () {
+		speed = 0.05f/(size);
 		transform.position = Vector3.MoveTowards(transform.position, Target, speed);
 		//transform.position = transform.position + Target;
 		//Debug.Log ("position is " + transform.position);
 		if (enHP <1) {
-			animator.Play ("death");
+			//animator.Play ("death");
 			Destroy (gameObject,0.2f);
 		}
 	}
