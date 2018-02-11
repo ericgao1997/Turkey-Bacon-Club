@@ -16,7 +16,7 @@ public class setEnemyType : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		animator = GetComponent<Animator>();
-		animator.SetBool("Blur", true);
+		//animator.SetBool("Blur", true);
 		size = nextEnSize;
 		type = nextEnType;
 		animator.SetInteger("Enemynum",type);
