@@ -41,10 +41,15 @@ public class PlayerBehaviour : MonoBehaviour {
         rotation_z = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0f, 0f, rotation_z + offset - 90);
 	}
-
+	int delayyyyy = 0;
 	void Shoot(){
-		var bullet = (GameObject)Instantiate(bulletPrefab, transform.position, transform.rotation);
-        bullet.transform.rotation = Quaternion.Euler(0, 0, rotation_z - 180);        
+		if (delayyyyy==0){
+			delayyyyy = 2;
+			var bullet = (GameObject)Instantiate(bulletPrefab, transform.position, transform.rotation);
+	        bullet.transform.rotation = Quaternion.Euler(0, 0, rotation_z - 180); 
+		}else{
+			delayyyyy--;
+		}
         // Destroy(bullet, 3.0f);
 	}
 	// void pewdate(){
