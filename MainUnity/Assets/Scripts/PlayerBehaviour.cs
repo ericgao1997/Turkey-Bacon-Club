@@ -7,6 +7,7 @@ public class PlayerBehaviour : MonoBehaviour {
 	public float offset = 0.0f;
 	public double angel = 0.0f;
 	public GameObject bulletPrefab;
+	private int delayyyyy = 0;
 
 	// public List<GameObject> bulList = new List<GameObject>();
 	// public List<int> del = new List<int>();
@@ -41,14 +42,12 @@ public class PlayerBehaviour : MonoBehaviour {
         rotation_z = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0f, 0f, rotation_z + offset - 90);
 	}
-	int delayyyyy = 0;
+
 	void Shoot(){
 		if (delayyyyy==0){
-			delayyyyy = 2;
+			delayyyyy = 10;
 			var bullet = (GameObject)Instantiate(bulletPrefab, transform.position, transform.rotation);
 	        bullet.transform.rotation = Quaternion.Euler(0, 0, rotation_z - 180); 
-		}else{
-			delayyyyy--;
 		}
         // Destroy(bullet, 3.0f);
 	}
@@ -68,7 +67,9 @@ public class PlayerBehaviour : MonoBehaviour {
 
 		//computes angle wrt origin
 		//double angle = System.Math.Atan((transform.position.y)/(transform.position.x));
-
+		if (delayyyyy > 0) {
+			delayyyyy--;
+		}
 		Follow_Mouse();
 
 		//listens to inputs
