@@ -26,15 +26,6 @@ public class PlayerBehaviour : MonoBehaviour {
 		transform.position = new Vector3(	(float)(5*System.Math.Cos(angel)), 	(float)(5*System.Math.Sin(angel)), 	0);
 	}
 
-	void Change_Resolution(int i){
-		if (i == -1){
-			Debug.Log("Changing resolution Down");
-		}
-		if (i == 1){
-			Debug.Log("Changing resolution Up");
-		}
-		
-	}
 	float rotation_z;
 	void Follow_Mouse(){
 		Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
@@ -72,22 +63,14 @@ public class PlayerBehaviour : MonoBehaviour {
 		}
 		Follow_Mouse();
 
-		//listens to inputs
-		if (Input.GetKey("d")){
-			Turn(1);
-		}else if (Input.GetKey("a")){
-			Turn(-1);
+		if (Input.GetKey("d") || Input.GetKey("a")){
+			if (Input.GetKey("d")){ Turn(1); }
+			if (Input.GetKey("a")){ Turn(-1); }
+			
 		}
-		if (Input.GetKeyDown("w")){
-			Change_Resolution(1);
-		}else if (Input.GetKeyDown("s")){
-			Change_Resolution(-1);
-		}
+
 		if (Input.GetMouseButtonDown(0)){	//leftmouse click
 			Shoot();
-		}
-		if (Input.GetMouseButtonDown(1)){
-			ShootSpecial();
 		}
 		// pewdate();
 	}
