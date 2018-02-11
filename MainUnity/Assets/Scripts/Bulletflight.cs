@@ -18,7 +18,9 @@ public class Bulletflight : MonoBehaviour {
         Destroy(gameObject, lifespan);
     }
 	void OnTriggerEnter2D(Collider2D other) {
-		print ("something");
+		if (other.gameObject.tag == "isEnemy") {
+			Destroy (gameObject);
+		}
 	}
 	public void move(){
         m_Rigidbody.velocity = -transform.right* m_Speed;
