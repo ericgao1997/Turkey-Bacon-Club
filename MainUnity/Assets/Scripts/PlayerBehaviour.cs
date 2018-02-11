@@ -4,9 +4,12 @@ using UnityEngine;
 using System;
 
 public class PlayerBehaviour : MonoBehaviour {
-
 	public float offset = 0.0f;
 	public double angel = 0.0f;
+	public GameObject bulletPrefab;
+
+	// public List<GameObject> bulList = new List<GameObject>();
+	// public List<int> del = new List<int>();
 	// Use this for initialization
 	void Start () {
 		//item should start at (0,5,2)
@@ -31,18 +34,26 @@ public class PlayerBehaviour : MonoBehaviour {
 		}
 		
 	}
-	
+	float rotation_z;
 	void Follow_Mouse(){
 		Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         difference.Normalize();
-        float rotation_z = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+        rotation_z = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0f, 0f, rotation_z + offset - 90);
 	}
 
 	void Shoot(){
-		//Instantiate(Bullet_0, this.transform.position, this.transform.rotation);
+		var bullet = (GameObject)Instantiate(bulletPrefab, transform.position, transform.rotation);
+        bullet.transform.rotation = Quaternion.Euler(0, 0, rotation_z - 180);        
+        // Destroy(bullet, 3.0f);
 	}
-
+	// void pewdate(){
+	// 	foreach (GameObject bulit in bulList)
+	// 	{
+	// 		print("shifting bulit");
+	// 		bulit.transform.position = bulit.transform.forward*0.1f;
+	// 	}
+	// }
 	void ShootSpecial(){
 		//stuff
 	}
@@ -58,14 +69,12 @@ public class PlayerBehaviour : MonoBehaviour {
 		//listens to inputs
 		if (Input.GetKey("d")){
 			Turn(1);
-		}
-		if (Input.GetKey("a")){
+		}else if (Input.GetKey("a")){
 			Turn(-1);
 		}
 		if (Input.GetKeyDown("w")){
 			Change_Resolution(1);
-		}
-		if (Input.GetKeyDown("s")){
+		}else if (Input.GetKeyDown("s")){
 			Change_Resolution(-1);
 		}
 		if (Input.GetMouseButtonDown(0)){	//leftmouse click
@@ -74,6 +83,7 @@ public class PlayerBehaviour : MonoBehaviour {
 		if (Input.GetMouseButtonDown(1)){
 			ShootSpecial();
 		}
+		// pewdate();
 	}
 
 }

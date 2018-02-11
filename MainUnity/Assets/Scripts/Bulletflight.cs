@@ -11,36 +11,20 @@ public class Bulletflight : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		Debug. Log("initialized");
-		lifespan=50;
+		lifespan=10;
 		m_Rigidbody = GetComponent<Rigidbody2D>();
-        m_Speed = 1f;
-	}
-	Vector3 heading = new Vector3(0.1f,0.1f,0);
+        m_Speed = 10f;
+
+        Destroy(gameObject, lifespan);
+    }
 
 	public void move(){
-		// transform.Translate(-transform.right * Time.deltaTime * m_Speed);
-		if (lifespan > 0){
-			transform.position += heading;
-			lifespan-=1;
-		} else {
-			//this.renderer.enabled = false;
-			GetComponent<Renderer>().enabled = false;
-			Destroy(this);
-		}
+        m_Rigidbody.velocity = -transform.right* m_Speed;
+
 	}
 
 	// Update is called once per frame
 	void Update () {
-		print("cheese");
-		//no collision case
-		if (lifespan > 0){
-			//transform.position += heading;
-			lifespan-=1;
-		} else {
-			//this.renderer.enabled = false;
-			GetComponent<Renderer>().enabled = false;
-			Destroy(this);
-		}
-		
+        move();
 	}
 }

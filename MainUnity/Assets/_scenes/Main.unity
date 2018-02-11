@@ -1186,6 +1186,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offset: 0
   angel: 0
+  bulletPrefab: {fileID: 1314141911422872, guid: 14ac572c1fb3f8745ab5eeb9d15ae9b5,
+    type: 2}
 --- !u!1001 &1937026859
 Prefab:
   m_ObjectHideFlags: 0
@@ -1243,6 +1245,12 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114082686273378476, guid: d5f15a9a6470642b38195ff2f54816aa,
+        type: 2}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 1314141911422872, guid: 14ac572c1fb3f8745ab5eeb9d15ae9b5,
+        type: 2}
     m_RemovedComponents:
     - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: d5f15a9a6470642b38195ff2f54816aa, type: 2}
