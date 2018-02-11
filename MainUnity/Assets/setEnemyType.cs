@@ -39,7 +39,9 @@ public class setEnemyType : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.tag == "isBullet") {
-			enHP--;
+			if (type == resChanger.level) {
+				enHP--;
+			}
 		}
 	}
 
