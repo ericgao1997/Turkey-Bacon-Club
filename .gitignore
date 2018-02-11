@@ -1,7 +1,7 @@
 .meta
 
 MainUnity/Temp/UnityLockfile/
-MainUnity/Library/metadata/
+metadata/
 .vs/
 .json/
 .info/
