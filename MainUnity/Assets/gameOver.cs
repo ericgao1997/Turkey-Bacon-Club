@@ -21,9 +21,19 @@ public class gameOver : MonoBehaviour {
 
 	}
 */
-
+	bool mouseIsBeingHeld = false;
+	void OnMouseOver()
+    {
+        //If your mouse hovers over the GameObject with the script attached, output this message
+        mouseIsBeingHeld = true;
+    }
+	void OnMouseExit()
+    {
+        //The mouse is no longer hovering over the GameObject so output this message each frame
+      	mouseIsBeingHeld = false;
+    }
 	void Update(){ //what the hell might as well make it a binding too
-		if (Input.GetMouseButtonDown (0)) {
+		if (Input.GetMouseButtonDown (0) && mouseIsBeingHeld) {
 			SceneManager.LoadScene ("Menu");
 		}
 	}
