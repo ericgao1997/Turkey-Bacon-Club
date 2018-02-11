@@ -11,7 +11,7 @@ public class Bulletflight : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		Debug. Log("initialized");
-		lifespan=10;
+		lifespan=5;
 		m_Rigidbody = GetComponent<Rigidbody2D>();
         m_Speed = 10f;
 
