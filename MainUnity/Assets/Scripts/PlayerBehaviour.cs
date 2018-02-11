@@ -9,6 +9,14 @@ public class PlayerBehaviour : MonoBehaviour {
 	public GameObject bulletPrefab;
 	private int delayyyyy = 0;
 
+	AudioSource Shot_fired;
+
+    //Play the music
+    bool m_Play;
+    //Detect when you use the toggle, ensures music isn’t played multiple times
+    bool m_ToggleChange;
+
+
 	// public List<GameObject> bulList = new List<GameObject>();
 	// public List<int> del = new List<int>();
 	// Use this for initialization
@@ -16,6 +24,10 @@ public class PlayerBehaviour : MonoBehaviour {
 		//item should start at (0,5,2)
 		angel = 0.0f;
 		transform.position = new Vector3(	(float)(5*System.Math.Cos(angel)), 	(float)(5*System.Math.Sin(angel)), 	0);
+
+		Shot_fired = GetComponent<AudioSource>();
+		m_Play = false;
+		m_ToggleChange = false;
 	}
 	
 	void Turn(int x){
@@ -66,6 +78,7 @@ public class PlayerBehaviour : MonoBehaviour {
 		}
 
 		if (Input.GetMouseButtonDown(0)){	//leftmouse click
+			Shot_fired.Play();
 			Shoot();
 		}
 		// pewdate();

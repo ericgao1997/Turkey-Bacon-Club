@@ -6,7 +6,7 @@ using System;
 public class collisionDD : MonoBehaviour {
 
     void Start(){
-        //stuff
+        Child_abuse = GetComponent<AudioSource>();
     }
 
     bool in_ring(int r){
@@ -22,8 +22,10 @@ public class collisionDD : MonoBehaviour {
         if (in_ring(5)){
             Debug. Log ("In!");
             gameObject.GetComponent<Renderer>().enabled = false;
-            Destroy(gameObject);
 			hpManager.health--;
+            Destroy(gameObject);
+
+
         }
     }
 
