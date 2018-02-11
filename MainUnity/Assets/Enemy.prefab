@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4055782396337898}
   - component: {fileID: 23472025609298230}
   - component: {fileID: 33128328250347516}
+  - component: {fileID: 114566144996137558}
   m_Layer: 0
   m_Name: Sphere of silence
   m_TagString: Untagged
@@ -190,6 +191,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb0e43240c5f344eeb4e6ee22fd37ae0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114566144996137558
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1856443862208766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5735da6c6e874419fb1ef3e26fb91f75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meshrend: {fileID: 23472025609298230}
 --- !u!114 &114862277535236192
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -201,6 +214,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379cd5679a28846379151b5b072a1e55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  size: 0
+  type: 0
   speed: 0
 --- !u!212 &212205578821439926
 SpriteRenderer:

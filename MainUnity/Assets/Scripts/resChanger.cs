@@ -10,24 +10,20 @@ public class resChanger : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		level = 3; //1 to 3
+		level = 0; //1 to 3
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
 		if (Input.GetKeyDown("w")){
-			if (level < 3)
-				level += 1;
-			else
-				;
+			level += 1;
+			level %= 4;
 		}
 
 		if (Input.GetKeyDown ("s")) {
-			if (level > 1)
-				level -= 1;
-			else //elif level == 0
-				;
+			level += 3;
+			level %= 4;
 		}
 
 		//Debug.Log (level);
