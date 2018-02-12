@@ -20,7 +20,7 @@ public class Choosecatcher : MonoBehaviour {
 			}else {
 				catcher [i].sprite = img [0];
 			}
-			Debug.Log (i);
+			//Debug.Log (i);
 		}
 	}
 }

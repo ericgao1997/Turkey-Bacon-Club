@@ -59,8 +59,7 @@ public class setEnemyType : MonoBehaviour {
 		//transform.position = transform.position + Target;
 		//Debug.Log ("position is " + transform.position);
 		if (enHP <1) {
-			//animator.Play ("death");
-			Destroy (gameObject,0.2f);
+			Destroy (gameObject);
 		}
 	}
 }
